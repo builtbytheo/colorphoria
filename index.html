@@ -32,5 +32,67 @@
       rel="stylesheet"
       href="./css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="grid">
+      <header class="grid__header">
+        <img
+          class="header__logo"
+          src="./assets/images/colorphoria-logo.png"
+          alt="Colorphoria logo." />
+
+        <div class="header__controls">
+          <input
+            type="color"
+            name="controls__color"
+            id="controls__color"
+            value="#80d8ff" />
+          <select
+            name="controls__select"
+            id="controls__select">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome Dark</option>
+            <option value="monochrome-light">Monochrome Light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic Complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+          </select>
+          <button id="controls__button">Generate color palette</button>
+        </div>
+      </header>
+
+      <div class="grid__color-swatches">
+        <!-- generated colors insert here -->
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">
+        Developed by <em class="footer__text--em">Theo Snyman</em>
+      </p>
+      <div class="footer__socials">
+        <a
+          href="https://www.linkedin.com/in/builtbytheo/"
+          target="_blank"
+          class="footer__social"
+          ><ion-icon name="logo-linkedin"></ion-icon
+        ></a>
+        <a
+          href="https://github.com/builtbytheo"
+          target="_blank"
+          class="footer__social"
+          ><ion-icon name="logo-github"></ion-icon
+        ></a>
+      </div>
+    </footer>
+
+    <!-- ionicon scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
