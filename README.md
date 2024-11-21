@@ -1,7 +1,7 @@
 # Colorphoria 🎨
 
-- [ ] Build out UI structure
-- [ ] Style and make the UI responsive
+- [x] Build out UI structure
+- [x] Style and make the UI responsive
 - [ ] Implement basic functionality
   - [ ] Random color palette generation feature
   - [ ] User selected color palette generation feature
