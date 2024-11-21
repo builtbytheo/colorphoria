@@ -1,0 +1,48 @@
+/*=========
+local fonts
+=========*/
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/montserrat-v29-latin-regular.woff2') format('woff2'),
+    url('../assets/fonts/montserrat-v29-latin-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/montserrat-v29-latin-500.woff2') format('woff2'),
+    url('../assets/fonts/montserrat-v29-latin-500.ttf') format('truetype');
+}
+
+/*=======
+variables
+=======*/
+:root {
+  --accent-100: #80d8ff;
+  --accent-200: #00789b;
+  --bg-100: #1a1a1a;
+  --bg-200: #292929;
+  --bg-300: #404040;
+  --primary-100: #ff80ab;
+  --primary-200: #de638e;
+  --primary-300: #951950;
+  --text-100: #ffffff;
+  --text-200: #e0e0e0;
+}
+
+/*=============
+element styling
+=============*/
+html {
+  font-family: 'Montserrat' sans-serif;
+}
+
+body {
+  background: var(--bg-100);
+  color: var(--text-200);
+}
