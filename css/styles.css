@@ -92,7 +92,7 @@ grid header responsiveness
   }
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 41.875rem) {
   .grid__header {
     flex-direction: row;
     justify-content: space-between;
@@ -108,7 +108,8 @@ grid header controls
 ==================*/
 #controls__color,
 #controls__select,
-#controls__button {
+#controls__button-generate,
+#controls__button-random {
   background: var(--bg-200);
   border: 0;
   color: var(--text-200);
@@ -116,7 +117,8 @@ grid header controls
 }
 
 #controls__select,
-#controls__button {
+#controls__button-generate,
+#controls__button-random {
   border-radius: 5px;
 }
 
@@ -130,19 +132,27 @@ grid header controls
   padding: 0.35rem 0.25rem;
 }
 
-#controls__button {
+#controls__button-generate {
   padding: 0.5rem 1rem;
   transition: color 0.2s;
 }
 
-#controls__button:hover {
+#controls__button-random {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+#controls__button-generate:hover,
+#controls__button-random:hover {
   color: var(--text-100);
 }
 
 /*===================
 grid generated colors
 ===================*/
-.grid__colors {
+.grid__color-swatches {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -153,7 +163,7 @@ grid generated colors
 }
 
 @media (min-width: 37.5rem) {
-  .grid__colors {
+  .grid__color-swatches {
     flex-direction: row;
   }
 }
@@ -186,6 +196,7 @@ footer content
 
 .footer__social {
   color: var(--text-200);
+  display: flex;
   font-size: 1.5rem;
   transition: color 0.2s;
 }
@@ -198,13 +209,13 @@ footer content
 footer responsiveness
 ===================*/
 @media (min-width: 26.5625rem) {
-  .grid__footer {
+  .footer {
     padding: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .grid__footer {
+  .footer {
     padding: 2rem;
   }
 }
