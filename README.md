@@ -15,6 +15,10 @@ Colorphoria is a vibrant and interactive color palette generator that allows use
 2. **Choose a Generation Mode:** Select a generation mode from the dropdown selection list
 3. **Generate a Palette:** Click the "Generate color palette" button
 
+### General Use 👨‍🏫
+
+1. **Copy a Color Swatch:** Click on any color you like to copy the HEX code to your device clipboard
+
 ## Development Roadmap 🏗️
 
 - [x] Build out UI structure
@@ -22,7 +26,7 @@ Colorphoria is a vibrant and interactive color palette generator that allows use
 - [ ] Implement basic functionality
   - [x] Random color palette generation feature
   - [x] User selected color palette generation feature
-  - [ ] Copy-to-clipboard feature
+  - [x] Copy-to-clipboard feature
   - [ ] Hex codes and names floating above color swatch feature
 
 ### Mind Dump for Potential Future Tasks 🧠
@@ -30,6 +34,7 @@ Colorphoria is a vibrant and interactive color palette generator that allows use
 - [ ] Maybe implement some hardware presence so that users with a physical keyboard get a modal with a hint to press the spacebar keyboard shortcut to generate random color palettes
 - [ ] Seperate color palette rendering from the API calls
 - [ ] Make `getRandomGenerationMode()` more robust by looping over all possible options in the select element
+- [ ] Definitely refactor the JS at some point because it's not very DRY
 
 ## 👨‍💻 Author
 

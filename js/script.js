@@ -32,13 +32,26 @@ function getRandomColorPalette() {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
-
       data.colors.forEach((color) => {
-        htmlString += `<div class="colors__color" style="background: ${color.hex.value}"></div>`
+        htmlString += `<div class="colors__color" style="background: ${color.hex.value}" data-hex="${color.hex.value}"></div>`
       })
 
       document.querySelector('.grid__color-swatches').innerHTML = htmlString
+
+      // copy functionality
+      const colorSwatches = document.querySelectorAll('.colors__color')
+      colorSwatches.forEach((swatch) => {
+        swatch.addEventListener('click', (e) => {
+          if (e.target.dataset.hex) {
+            navigator.clipboard.writeText(e.target.dataset.hex)
+            const copyModal = document.querySelector('#modal--copy')
+            copyModal.style.display = 'inline-block'
+            setTimeout(() => {
+              copyModal.style.display = 'none'
+            }, 1500)
+          }
+        })
+      })
     })
 }
 
@@ -80,12 +93,25 @@ generatePersonalizedPaletteBtn.addEventListener('click', () => {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
-
       data.colors.forEach((color) => {
-        htmlString += `<div class="colors__color" style="background: ${color.hex.value}"></div>`
+        htmlString += `<div class="colors__color" style="background: ${color.hex.value}" data-hex="${color.hex.value}"></div>`
       })
 
       document.querySelector('.grid__color-swatches').innerHTML = htmlString
+
+      // copy functionality
+      const colorSwatches = document.querySelectorAll('.colors__color')
+      colorSwatches.forEach((swatch) => {
+        swatch.addEventListener('click', (e) => {
+          if (e.target.dataset.hex) {
+            navigator.clipboard.writeText(e.target.dataset.hex)
+            const copyModal = document.querySelector('#modal--copy')
+            copyModal.style.display = 'inline-block'
+            setTimeout(() => {
+              copyModal.style.display = 'none'
+            }, 1500)
+          }
+        })
+      })
     })
 })
