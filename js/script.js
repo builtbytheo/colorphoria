@@ -24,6 +24,10 @@ function getRandomGenerationMode() {
   return modes[Math.floor(Math.random() * modes.length)]
 }
 
+function getTextColor(colorObject) {
+  return colorObject.contrast.value === '#ffffff' ? '#e0e0e0' : '#1a1a1a'
+}
+
 function getRandomColorPalette() {
   let htmlString = ''
 
@@ -33,7 +37,11 @@ function getRandomColorPalette() {
     .then((res) => res.json())
     .then((data) => {
       data.colors.forEach((color) => {
-        htmlString += `<div class="colors__color" style="background: ${color.hex.value}" data-hex="${color.hex.value}"></div>`
+        const textColor = getTextColor(color)
+        htmlString += `<div class="colors__color" style="background: ${color.hex.value}; color: ${textColor}" data-hex="${color.hex.value}">
+                        <p class="color__hex">${color.hex.clean}</p>
+                        <p class="color__name">${color.name.value}</p> 
+                      </div>`
       })
 
       document.querySelector('.grid__color-swatches').innerHTML = htmlString
@@ -94,7 +102,11 @@ generatePersonalizedPaletteBtn.addEventListener('click', () => {
     .then((res) => res.json())
     .then((data) => {
       data.colors.forEach((color) => {
-        htmlString += `<div class="colors__color" style="background: ${color.hex.value}" data-hex="${color.hex.value}"></div>`
+        const textColor = getTextColor(color)
+        htmlString += `<div class="colors__color" style="background: ${color.hex.value}; color: ${textColor}" data-hex="${color.hex.value}">
+                        <p class="color__hex">${color.hex.clean}</p>
+                        <p class="color__name">${color.name.value}</p> 
+                      </div>`
       })
 
       document.querySelector('.grid__color-swatches').innerHTML = htmlString

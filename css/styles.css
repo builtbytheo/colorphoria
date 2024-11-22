@@ -164,12 +164,37 @@ grid generated colors
 
 .colors__color {
   cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   flex: 1;
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.color__hex {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+
+.color__name {
+  font-size: 0.75rem;
 }
 
 @media (min-width: 37.5rem) {
   .grid__color-swatches {
     flex-direction: row;
+  }
+
+  .colors__color {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    padding: 0 1rem 3rem;
   }
 }
 

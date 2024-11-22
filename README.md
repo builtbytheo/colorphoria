@@ -23,11 +23,11 @@ Colorphoria is a vibrant and interactive color palette generator that allows use
 
 - [x] Build out UI structure
 - [x] Style and make the UI responsive
-- [ ] Implement basic functionality
+- [x] Implement basic functionality
   - [x] Random color palette generation feature
   - [x] User selected color palette generation feature
   - [x] Copy-to-clipboard feature
-  - [ ] Hex codes and names floating above color swatch feature
+  - [x] Hex codes and names floating above color swatch feature
 
 ### Mind Dump for Potential Future Tasks 🧠
 
@@ -35,6 +35,7 @@ Colorphoria is a vibrant and interactive color palette generator that allows use
 - [ ] Seperate color palette rendering from the API calls
 - [ ] Make `getRandomGenerationMode()` more robust by looping over all possible options in the select element
 - [ ] Definitely refactor the JS at some point because it's not very DRY
+- [ ] Implement a cleaner UI when transitioning the project to React
 
 ## 👨‍💻 Author
 
